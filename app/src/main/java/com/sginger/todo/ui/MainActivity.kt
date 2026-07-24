@@ -37,6 +37,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 @Composable
 fun App(innerPadding: PaddingValues) {
     val navController = rememberNavController()
