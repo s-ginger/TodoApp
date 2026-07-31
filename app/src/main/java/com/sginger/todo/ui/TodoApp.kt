@@ -7,8 +7,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.sginger.todo.features.main.Main
 import com.sginger.todo.ui.navigation.Greetings
 import com.sginger.todo.ui.navigation.Home
+import com.sginger.todo.ui.navigation.Main
 
 @Composable
 fun TodoApp(innerPadding: PaddingValues) {
@@ -16,9 +18,12 @@ fun TodoApp(innerPadding: PaddingValues) {
 
     NavHost(
         navController = navController,
-        startDestination = Home,
+        startDestination = Main,
         modifier = Modifier.padding(innerPadding)
     ) {
+        composable<Main> {
+            Main(navController = navController)
+        }
         composable<Home> {
             Home(navController = navController)
         }

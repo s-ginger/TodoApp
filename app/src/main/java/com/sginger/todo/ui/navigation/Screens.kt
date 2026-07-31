@@ -10,3 +10,6 @@ object Home
 @Serializable
 object Greetings
 
+
+@Serializable
+object Main
